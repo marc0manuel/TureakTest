@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flight Ticket Booking a Flat Responsive Widget Template :: w3layouts</title>
+	<title>Tureak | Budget Friendly Flights</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -19,7 +19,7 @@
 		
 </head>
 <body>
-	<h1>Flight Ticket Booking</h1>
+	<h1><strong>Tureak</strong> | Travel more for less!</h1>
 	<div class="main-agileinfo">
 		<div class="sap_tabs">			
 			<div id="horizontalTab">
@@ -93,7 +93,7 @@
 								<div class="clear"></div>
 							</div>
 							<div class="clear"></div>
-							<input type="submit" value="Search Flights">
+							<input type="submit" value="Search Flights" onclick="searchFlights()">
 						</form>						
 					</div>		
 					<div class="tab-1 resp-tab-content oneway">
@@ -307,6 +307,11 @@
 			$('#myList li').not(':lt('+x+')').hide();
 		});
 	});
+
+	function searchFlights() {
+   alert("Submit button clicked!");
+   
+}
 </script>
 <!-- //load-more -->
 
