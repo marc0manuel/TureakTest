@@ -34,11 +34,11 @@
 						<form action="#" method="post">
 							<div class="from">
 								<h3>From</h3>
-								<input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
+								<input type="text" name="city" class="city1" id="city1" placeholder="Type Departure City" required="">
 							</div>
 							<div class="to">
 								<h3>To</h3>
-								<input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
+								<input type="text" name="city" class="city2" id="city2" placeholder="Type Destination City" required="">
 							</div>
 							<div class="clear"></div>
 							<div class="date">
@@ -94,7 +94,8 @@
 							</div>
 							<div class="clear"></div>
 							<!--THIS IS THE ONCLICK FUNCTION TO SEARCH FLIGHTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-							<input type="submit" value="Search Flights" id="searchroundtrip">
+							<input type="button" value="Search Flights" id="searchroundtrip">
+							<input type="submit" value ="Cock">
 						</form>						
 					</div>		
 					<div class="tab-1 resp-tab-content oneway">
@@ -261,6 +262,9 @@
 	<!--script for portfolio-->
 		<script src="js/jquery.min.js"> </script>
 		<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+		  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+		  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+		  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 		<script type="text/javascript">
 			$(document).ready(function () {
 				$('#horizontalTab').easyResponsiveTabs({
@@ -270,6 +274,7 @@
 				});
 			});		
 		</script>
+		<script src="js/getData.js"></script>
 		<!--//script for portfolio-->
 				<!-- Calendar -->
 				<link rel="stylesheet" href="css/jquery-ui.css" />
@@ -295,6 +300,9 @@
 								<!--//quantity-->
 						<!--load more-->
 								<script>
+
+
+/**
 	$(document).ready(function () {
 		size_li = $("#myList li").size();
 		x=1;
@@ -308,7 +316,7 @@
 			$('#myList li').not(':lt('+x+')').hide();
 		});
 	});
-
+**/
 //FIRST FUNCTION TO START THIS OFF RIGHT
 //
 //
@@ -320,8 +328,8 @@
 //
 $("#searchroundtrip").click(() => {
 
-	alert("Submit button clicked!");
-	window.location = "/results.html"
+	
+	getData($("#city1").val(), $("#city2").val(), $("#datepicker").val(), $("#datepicker1").val(), $("#w3_country1").val())
 });
 
 	
