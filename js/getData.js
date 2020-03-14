@@ -3,7 +3,7 @@ function getData(sAirport, fAirport, sDate, fDate, seatClass) {
 console.log("You are leaving from: " + sAirport + " heading to: " + fAirport + ". Leaving on " + sDate + " and returning on " + fDate)
 console.log("You have requested seat(s) in: " + seatClass)
 
-var Amadeus = require('amadeus');
+
 
 var amadeus = new Amadeus({
   clientId: 'qFWSyWZObr4TMneA2obkDuAMsgtYkIVL',
